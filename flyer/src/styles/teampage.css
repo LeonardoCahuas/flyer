@@ -1,0 +1,10 @@
+@import "./index.css";
+
+.team-container{
+    margin-top: 200px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.name-avatar-title{
+    color: var(--color-white);
+}

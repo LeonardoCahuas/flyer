@@ -1,0 +1,17 @@
+@import "./index.css";
+
+.login-section-container{
+    min-height: 700px;
+    display: flex;
+    justify-content: right;
+}
+
+.form-body-container{
+    min-height: fit-content;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.inizia-chat-text-container{
+    width: 400px;
+}

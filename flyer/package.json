@@ -1,14 +1,21 @@
 {
-  "name": "flyer",
+  "name": "my-app-chat",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@splinetool/react-spline": "^2.2.5",
+    "@splinetool/runtime": "^0.9.208",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "daisyui": "^2.51.2",
+    "framer-motion": "^9.1.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
+    "stream-chat": "^8.3.0",
+    "stream-chat-react": "^10.5.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
   }
 }

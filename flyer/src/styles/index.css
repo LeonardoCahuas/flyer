@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-blue: hsla(217, 90%, 20%, 0.82);
+  --color-purple: hsl(300, 58%, 34%);
+  --color-white: white;
+}
+
+html,
+body{
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  color:var(--color-blue);
+  margin-bottom: 150px;
+}
+
+.main-title {
+  color: var(--color-blue);
+  place-items: flex-start;
+  margin-right: -50px;
+}
+
+.btn-generic {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+}
+
+.btn-generic:hover {
+  background-color: var(--color-purple);
+}
+
+.fa-solid {
+  color: var(--color-purple);
+  margin-left: 10px;
+  font-size: 20px;
+}

@@ -1,0 +1,30 @@
+@import "./index.css";
+
+.hero-container-all {
+  display: flex;
+  justify-content: left;
+  background-color: rgb(255, 254, 255);
+  height: 800px;
+  width: 100vw;
+}
+
+.plane-icon {
+  width: 150px;
+  color: white;
+  text-align: left;
+  position: absolute;
+  left: 5;
+  padding-bottom: 10px;
+  animation: 3s linear swingViewport;
+  font-family: sans-serif;
+}
+
+
+@keyframes swingViewport {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(100vw - 110%));
+    }
+  }

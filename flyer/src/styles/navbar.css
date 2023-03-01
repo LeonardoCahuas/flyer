@@ -1,0 +1,18 @@
+@import "./index.css";
+
+.navbar-btns{
+  color: rgb(231, 227, 227);
+  border: none;
+}
+
+.navbar-btns:hover {
+  background-color: rgb(231, 227, 227);
+  color: var(--color-purple);
+}
+
+@media (max-width: 1020px){
+
+.full-screen-navbar{
+  visibility: hidden;
+}
+}
