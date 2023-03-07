@@ -14,7 +14,7 @@ export default function Chat() {
   const [contacts, setContacts] = useState([]);
   const [currentChat, setCurrentChat] = useState(undefined);
   const [currentUser, setCurrentUser] = useState(undefined);
-  useEffect(async () => {
+  async function setUser(){
     if (!localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
       navigate("/login");
     } else {
@@ -24,6 +24,11 @@ export default function Chat() {
         )
       );
     }
+  }
+
+  useEffect(() => {
+    setUser()
+    
   }, []);
   useEffect(() => {
     if (currentUser) {
@@ -31,16 +36,20 @@ export default function Chat() {
       socket.current.emit("add-user", currentUser._id);
     }
   }, [currentUser]);
-
-  useEffect(async () => {
+  
+  async function contactsSet() {
     if (currentUser) {
       if (currentUser.isAvatarImageSet) {
-        const data = await axios.get(`${allUsersRoute}/${currentUser._id}`);
+        const data = await axios.get(`${allUsersRoute}/${currentUser._id}`, {headers: {"Access-Control-Allow-Origin": "http://localhost:3003"}});
         setContacts(data.data);
       } else {
         navigate("/setAvatar");
       }
     }
+  }
+
+  useEffect(() => {
+    contactsSet()
   }, [currentUser]);
   const handleChatChange = (chat) => {
     setCurrentChat(chat);
@@ -71,8 +80,8 @@ const Container = styled.div`
   align-items: center;
   background-color: #131324;
   .container {
-    height: 85vh;
-    width: 85vw;
+    height: 100vh;
+    width: 100vw;
     background-color: #00000076;
     display: grid;
     grid-template-columns: 25% 75%;

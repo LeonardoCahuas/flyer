@@ -1,5 +1,5 @@
 import "../styles/teampage.css";
-import Bianca from "../images/Bianca.jpeg";
+import Bianca from "../assets/Bianca.jpeg";
 
 export function Teampage() {
 

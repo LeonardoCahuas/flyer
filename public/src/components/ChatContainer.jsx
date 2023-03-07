@@ -10,8 +10,8 @@ export default function ChatContainer({ currentChat, socket }) {
   const [messages, setMessages] = useState([]);
   const scrollRef = useRef();
   const [arrivalMessage, setArrivalMessage] = useState(null);
-
-  useEffect(async () => {
+  
+  async function message(){
     const data = await JSON.parse(
       localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
     );
@@ -20,18 +20,22 @@ export default function ChatContainer({ currentChat, socket }) {
       to: currentChat._id,
     });
     setMessages(response.data);
-  }, [currentChat]);
+  }
+  async function getCurrentChat(){
+    if (currentChat) {
+      await JSON.parse(
+        localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
+      )._id;
+    }
+  };
 
   useEffect(() => {
-    const getCurrentChat = async () => {
-      if (currentChat) {
-        await JSON.parse(
-          localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
-        )._id;
-      }
-    };
+    message()
+  }, [currentChat, message]);
+
+  useEffect(() => {
     getCurrentChat();
-  }, [currentChat]);
+  }, [currentChat, getCurrentChat]);
 
   const handleSendMsg = async (msg) => {
     const data = await JSON.parse(
