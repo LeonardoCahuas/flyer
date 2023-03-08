@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BsEmojiSmileFill } from "react-icons/bs";
-import { IoMdSend } from "react-icons/io";
+import { IoSend } from "react-icons/io5";
 import styled from "styled-components";
 import Picker from "emoji-picker-react";
 
@@ -28,10 +28,7 @@ export default function ChatInput({ handleSendMsg }) {
   return (
     <Container>
       <div className="button-container">
-        <div className="emoji">
-          <BsEmojiSmileFill onClick={handleEmojiPickerhideShow} />
-          {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
-        </div>
+        
       </div>
       <form className="input-container" onSubmit={(event) => sendChat(event)}>
         <input
@@ -41,7 +38,7 @@ export default function ChatInput({ handleSendMsg }) {
           value={msg}
         />
         <button type="submit">
-          <IoMdSend />
+          <IoSend />
         </button>
       </form>
     </Container>
@@ -52,7 +49,7 @@ const Container = styled.div`
   display: grid;
   align-items: center;
   grid-template-columns: 5% 95%;
-  background-color: #080420;
+  background-color: #0d0d30;
   padding: 0 2rem;
   @media screen and (min-width: 720px) and (max-width: 1080px) {
     padding: 0 1rem;
@@ -74,13 +71,13 @@ const Container = styled.div`
         position: absolute;
         top: -350px;
         background-color: #080420;
-        box-shadow: 0 5px 10px #9a86f3;
-        border-color: #9a86f3;
+        box-shadow: 0 5px 10px #892389;
+        border-color: #892389;
         .emoji-scroll-wrapper::-webkit-scrollbar {
           background-color: #080420;
           width: 5px;
           &-thumb {
-            background-color: #9a86f3;
+            background-color: #892389;
           }
         }
         .emoji-categories {
@@ -90,7 +87,7 @@ const Container = styled.div`
         }
         .emoji-search {
           background-color: transparent;
-          border-color: #9a86f3;
+          border-color: #892389;
         }
         .emoji-group:before {
           background-color: #080420;
@@ -106,7 +103,7 @@ const Container = styled.div`
     gap: 2rem;
     background-color: #ffffff34;
     input {
-      width: 90%;
+      width: 100%;
       height: 60%;
       background-color: transparent;
       color: white;
@@ -115,7 +112,7 @@ const Container = styled.div`
       font-size: 1.2rem;
 
       &::selection {
-        background-color: #9a86f3;
+        background-color: #892389;
       }
       &:focus {
         outline: none;
@@ -127,7 +124,7 @@ const Container = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #9a86f3;
+      background-color: #892389;
       border: none;
       @media screen and (min-width: 720px) and (max-width: 1080px) {
         padding: 0.3rem 1rem;

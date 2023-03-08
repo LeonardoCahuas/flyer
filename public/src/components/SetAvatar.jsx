@@ -127,6 +127,8 @@ const Container = styled.div`
   .title-container {
     h1 {
       color: white;
+      margin-bottom: 0px;
+      font-size: 25px;
     }
   }
   .avatars {
@@ -151,7 +153,7 @@ const Container = styled.div`
     }
   }
   .submit-btn {
-    background-color: #4e0eff;
+    background-color: #892389;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -161,7 +163,7 @@ const Container = styled.div`
     font-size: 1rem;
     text-transform: uppercase;
     &:hover {
-      background-color: #4e0eff;
+      background-color: #892389;
     }
   }
 `;

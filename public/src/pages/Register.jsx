@@ -89,8 +89,8 @@ export default function Register() {
       <FormContainer>
         <form action="" onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
-            <img src={Logo} alt="logo" />
-            <h1>snappy</h1>
+            <i className="fa-solid fa-plane"></i>
+            <h1>FLYER</h1>
           </div>
           <input
             type="text"
@@ -135,7 +135,7 @@ const FormContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color: #131324;
+  background-color: #0d0d30;
   .brand {
     display: flex;
     align-items: center;
@@ -147,6 +147,12 @@ const FormContainer = styled.div`
     h1 {
       color: white;
       text-transform: uppercase;
+      margin-bottom:0px;
+      font-size:25px;
+      font-family: Luminari;
+    }
+    i{
+      font-size:25px;
     }
   }
 
@@ -154,14 +160,14 @@ const FormContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-color: #00000076;
+    background-color: #ffffff20;
     border-radius: 2rem;
     padding: 3rem 5rem;
   }
   input {
     background-color: transparent;
     padding: 1rem;
-    border: 0.1rem solid #4e0eff;
+    border: 0.1rem solid #892389;
     border-radius: 0.4rem;
     color: white;
     width: 100%;
@@ -172,7 +178,7 @@ const FormContainer = styled.div`
     }
   }
   button {
-    background-color: #4e0eff;
+    background-color: #892389;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -182,14 +188,14 @@ const FormContainer = styled.div`
     font-size: 1rem;
     text-transform: uppercase;
     &:hover {
-      background-color: #4e0eff;
+      background-color: #892389;
     }
   }
   span {
     color: white;
     text-transform: uppercase;
     a {
-      color: #4e0eff;
+      color: #892389;
       text-decoration: none;
       font-weight: bold;
     }

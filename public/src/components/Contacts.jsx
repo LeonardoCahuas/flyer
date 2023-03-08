@@ -26,8 +26,8 @@ export default function Contacts({ contacts, changeChat }) {
       {currentUserImage && currentUserImage && (
         <Container>
           <div className="brand">
-            <img src={Logo} alt="logo" />
-            <h3>snappy</h3>
+            <i className="fa-solid fa-plane"></i>
+            <h3>FLYER</h3>
           </div>
           <div className="contacts">
             {contacts.map((contact, index) => {
@@ -72,7 +72,7 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 10% 75% 15%;
   overflow: hidden;
-  background-color: #080420;
+  background-color: #0d0d30;
   .brand {
     display: flex;
     align-items: center;
@@ -84,6 +84,11 @@ const Container = styled.div`
     h3 {
       color: white;
       text-transform: uppercase;
+      font-size: 26px;
+      font-family: Luminari;
+    }
+    i{
+      font-size: 26px;
     }
   }
   .contacts {
@@ -101,7 +106,7 @@ const Container = styled.div`
       }
     }
     .contact {
-      background-color: #ffffff34;
+      background-color: #ffffff20;
       min-height: 5rem;
       cursor: pointer;
       width: 90%;
@@ -123,7 +128,7 @@ const Container = styled.div`
       }
     }
     .selected {
-      background-color: #9a86f3;
+      background-color: #892389;
     }
   }
 
@@ -142,6 +147,7 @@ const Container = styled.div`
     .username {
       h2 {
         color: white;
+        font-size: 25px;
       }
     }
     @media screen and (min-width: 720px) and (max-width: 1080px) {

@@ -124,6 +124,7 @@ const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    background-color: #0d0d30;
     .user-details {
       display: flex;
       align-items: center;
@@ -136,6 +137,7 @@ const Container = styled.div`
       .username {
         h3 {
           color: white;
+          font-size: 22px;
         }
       }
     }
@@ -172,13 +174,13 @@ const Container = styled.div`
     .sended {
       justify-content: flex-end;
       .content {
-        background-color: #4f04ff21;
+        background-color: #892389;
       }
     }
     .recieved {
       justify-content: flex-start;
       .content {
-        background-color: #9900ff20;
+        background-color: #894389;
       }
     }
   }
