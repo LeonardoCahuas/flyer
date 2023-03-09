@@ -40,7 +40,7 @@ const server = app.listen(process.env.PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:59887",
+    origin: "http://localhost:3001",
     credentials: true,
   },
 });

@@ -1,7 +1,6 @@
 {
   "name": "chat-app-backend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -20,5 +19,6 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.17"
-  }
+  },
+  "description": ""
 }
