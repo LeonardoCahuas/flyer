@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import { Homepage } from "./Homepage";
+import { Homepage } from "../pages/Homepage";
 import { Navbar } from "../components/Navbar";
-import { Teampage } from "./Teampage";
+import { Teampage } from "../components/Teamsection";
 
 import "../styles/index.css";
 import "../styles/navbar.css";
@@ -17,4 +17,3 @@ export function AppPages() {
     </div>
   );
 }
-

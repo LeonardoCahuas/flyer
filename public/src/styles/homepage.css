@@ -1,0 +1,9 @@
+.Cards-component-container{
+    padding: 150px 0;
+}
+
+@media (max-width: 900px){
+    .Cards-component-container{
+        padding: 70px 0;
+    } 
+}

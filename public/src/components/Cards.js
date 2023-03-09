@@ -6,8 +6,8 @@ const cardVariants= {
     y: 300
   },
   onscreen: {
-    y: 50,
-    rotate: -10,
+    y: 30,
+    rotate: -8,
     transition: {
       type: "spring",
       bounce: 0.4,
@@ -24,6 +24,7 @@ function CardAnimated({ text, hueA, hueB }) {
   return (
     <motion.div
       className="card-container"
+      id="about"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.8 }}
@@ -35,12 +36,12 @@ function CardAnimated({ text, hueA, hueB }) {
     </motion.div>
   );
 }
-
+ 
 const info = [
-  ["Scrivi un messaggio quando vuoi ⏱️ e da dove vuoi 🌏 ", 217, 300],
-  ["Flyer ✈️  invia per te testi, immagini e video in un battito d'ali 💥", 300, 217],
-  ["Non ci sono limiti di risoluzione...  Flyer ✈️ puó inviare per te qualsiasi tipologia di file!", 217, 300],
-  ["Non c'é meta che Flyer ✈️  non possa raggiungere 😎", 300, 217],
+  ["Entra nel tuo canale e inizia una chat con chi vuoi  💌"],
+  ["Scrivi un messaggio quando vuoi ⏱️ e da dove vuoi 📲 "],
+  ["Messaggi sicuri e crittografati 😎"],
+  ["Non c'é meta che Flyer ✈️  non possa raggiungere 🌏"],
 ];
 
 export const Cards = () => {

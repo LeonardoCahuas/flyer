@@ -2,20 +2,28 @@
 
 .hero-container-all {
   display: flex;
-  justify-content: left;
-  background-color: rgb(255, 254, 255);
+  justify-content: center;
+  background-image: url("../assets/backgroundImage.jpeg");
   height: 800px;
   width: 100vw;
 }
 
+.titles-container{
+  max-width: 800px;
+}
+
+.empty-div{
+width: 130px;
+height: 80px;
+}
+
 .plane-icon {
   width: 150px;
-  color: white;
   text-align: left;
   position: absolute;
   left: 5;
   padding-bottom: 10px;
-  animation: 3s linear swingViewport;
+  animation: 3.5s linear swingViewport;
   font-family: sans-serif;
 }
 
@@ -25,6 +33,97 @@
       transform: translateX(0);
     }
     to {
-      transform: translateX(calc(100vw - 110%));
+      transform: translateX(calc(100vw - 100%));
     }
   }
+
+@media screen and (min-width: 280px) and (max-width: 700px) {
+
+  .hero-container-all{
+    height: 500px;
+  }
+
+  .titles-container > h1{
+      font-size: 30px;
+      text-align: center;
+      margin: 20px 0;
+      padding: 10px;
+  }
+
+  .animated-characters-container{
+    display: none;
+  }
+
+  .empty-div{
+    display: none;
+  }
+
+  .titles-container{
+    justify-content: center;
+  }
+
+  .inizia-chat-container{
+   justify-content: center;
+   margin: 0 auto;
+   margin-top: 50px;
+  }
+
+  .inizia-chat-container > button{
+    font-size: 12px;
+  }
+
+  .plane-under-words{
+    transform: rotate(90deg);
+  }
+
+  .plane-icon {
+    width: 90px;
+    left: 140px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    animation: 3s ease-in-out infinite swingViewport;
+  }
+
+  @keyframes swingViewport {
+    to {
+      transform: rotate(-359deg);
+    }
+  }
+  
+}
+
+
+@media screen and (min-width: 700px) and(max-width: 1000px) {
+
+  .titles-container{
+    text-align: center;
+    margin: 0 50px;
+  }
+
+  .titles-container > h1{
+      font-size: 48px;
+      margin: 50px auto;
+  }
+
+  .empty-div{
+    display: none;
+  }
+
+  .inizia-chat-container{
+    justify-content: center;
+    margin: 30px auto;
+  }
+ 
+   .inizia-chat-container > button{
+     font-size: 20px;
+   }
+
+   .plane-under-words{
+    transform: rotate(90deg);
+  }
+
+  .plane-icon {
+    left: 350px;
+    margin-top: -20px;
+  }
+}

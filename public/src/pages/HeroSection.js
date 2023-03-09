@@ -1,16 +1,13 @@
 import AnimatedCharacters from "../components/AnimatedCharacters";
 import "../styles/herosection.css";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, Link } from "react";
+//import { LoginForm } from "./LoginForm";
 
 export const HeroSection = () => {
   const [replay, setReplay] = useState(true);
   // Placeholder text data, as if from API
   const placeholderText = [
-    /*{
-      type: "heading1",
-      text: "Una nuova App di Messaggistica!",
-    },*/
     {
       type: "heading2",
       text: "Fai VOLARE i tuoi messaggi... ",
@@ -27,39 +24,29 @@ export const HeroSection = () => {
 
   return (
     <motion.div
-      className="hero hero-container-all"
+      className="hero hero-container-all mb-10"
       initial="hidden"
-      // animate="visible"
+      //animate="visible"
       animate={replay ? "visible" : "hidden"}
       variants={container}>
-      <div className="text-left flex ml-12 hero-titles-container">
+      <div className="text-left flex flex-wrap items-center hero-titles-container">
       <div className="flex-col titles-container">
-        <h1 className="mb-8 text-5xl font-bold">
+        <h1 className="mb-2 text-5xl font-bold">
             Una nuova App di Messaggistica!
           </h1>
         {placeholderText.map((item, index) => {
-          return (<div className="text-4xl pt-8 font-light"><AnimatedCharacters {...item} key={index} /></div>);
+          return (<div className="text-2xl pt-8 font-light animated-characters-container"><AnimatedCharacters {...item} key={index} /></div>);
         })}
-        <div className="plane-icon text-2xl mb-24"><i className="fa-solid fa-plane"></i></div>
+        <div className="plane-icon text-2xl mb-24"><i className="fa-solid fa-plane plane-under-words"></i></div>
+      </div>
+      <div className="empty-div visible"></div>
+      {/*<div className="flex flex-wrap">
+        <LoginForm />
+      </div>*/}
+      <div className="inizia-chat-container items-center py-12">
+      <a href="http://localhost:3002"><button className="btn btn-primary btn-generic">Inizia una chat</button></a>
       </div>
       </div>
     </motion.div>
   );
-  {
-    /* return (
-    <div className="hero min-h-screen hero-container-all">
-      <div className="hero main-title text-left text-neutral-content">
-        <div className="max-w-md flex-end hero-titles-container">
-          <h1 className="mb-5 text-5xl font-bold">
-            Una nuova App di Messaggistica!
-          </h1>
-          <p className="mb-5 text-xl">
-            Fai <strong className="text-xl italic font-mono volare-text">volare</strong> i tuoi messaggi... Inizia una chat con chi vuoi, quando vuoi e dove vuoi!
-          </p>
-          <button className="btn btn-primary btn-generic text-sm">Scopri di più</button>
-        </div>
-      </div>
-    </div>
-  );*/
-  }
 };

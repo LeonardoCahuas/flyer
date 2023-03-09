@@ -1,19 +1,17 @@
-import { HeroSection } from "./HeroSection";
-import { LoginForm } from "../components/LoginForm";
+import { HeroSection } from "../pages/HeroSection";
 import { Cards } from "../components/Cards";
-import { Teampage } from "./Teampage";
+import { Teampage } from "../components/Teamsection";
+
 import "../styles/index.css";
-import Login from "./Login";
+import "../styles/homepage.css";
 
 export const Homepage = () => {
   return (
-    <div>
+    <div className="flex flex-col" >
       <HeroSection />
-      <div className="flex">
-        
-        <LoginForm/>
+      <div className="Cards-component-container">
+        <Cards />
       </div>
-      <Cards />
       <Teampage />
     </div>
   );

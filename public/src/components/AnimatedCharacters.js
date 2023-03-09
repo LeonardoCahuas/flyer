@@ -25,7 +25,7 @@ const AnimatedCharacters = (props) => {
     hidden: {
       y: "200%",
       color: "#F0F8FF",
-      fontSize: 40,
+      fontSize: 30,
       padding: 5,
       transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 }
     },
