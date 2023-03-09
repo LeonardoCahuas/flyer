@@ -7,6 +7,9 @@ module.exports = {
         "5px": "5px",
       }
     },
+    fontFamily: {
+      'sans': ['Luminari'],
+     }
   },
   plugins: [require("daisyui")],
 };

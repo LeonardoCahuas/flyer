@@ -15,7 +15,7 @@ export const Navbar = () => {
           <li className="nav-btns navbar-btns hamburger-menu-about pb-2"><i className="fa-solid fa-plane"><a href="#about" className="text-white text-sm font-light">About   FLYER</a></i></li>
         </ul>
       </div>
-      <Link to="/" className="btn btn-ghost nav-btns navbar-btns normal-case ml-2 text-xl">Flyer<i className="fa-solid fa-plane"></i></Link>
+      <Link to="/" className="btn btn-ghost font-sans nav-btns navbar-btns normal-case ml-2 text-3xl">FLYER<i className="fa-solid fa-plane"></i></Link>
     </div>
     <div className="navbar-end full-screen-navbar mr-4">
     <a className="btn nav-btns navbar-btns bg-base-100 mr-4" href="#about">About FLYER </a>

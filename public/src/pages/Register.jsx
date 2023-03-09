@@ -65,7 +65,7 @@ export default function Register() {
     event.preventDefault();
     if (handleValidation()) {
       const { email, username, password } = values;
-      const { data } = await axios.post("http://localhost:5010/api/auth/register", {
+      const { data } = await axios.post("http://localhost:5000/api/auth/register", {
         username,
         email,
         password,
@@ -79,7 +79,7 @@ export default function Register() {
           process.env.REACT_APP_LOCALHOST_KEY,
           JSON.stringify(data.user)
         );
-        navigate("/");
+        navigate("/chat");
       }
     }
   };

@@ -8,7 +8,7 @@ import "../styles/navbar.css";
 
 export function AppPages() {
   return (
-    <div className="bg-base-300">
+    <div className="bg-base-300 min-h-screen">
     <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />

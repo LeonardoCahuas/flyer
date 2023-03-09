@@ -44,7 +44,7 @@ export const HeroSection = () => {
         <LoginForm />
       </div>*/}
       <div className="inizia-chat-container items-center py-12">
-      <a href="http://localhost:3002"><button className="btn btn-primary btn-generic">Inizia una chat</button></a>
+      <a href="http://localhost:3002/chat"><button className="btn btn-primary btn-generic">Inizia una chat</button></a>
       </div>
       </div>
     </motion.div>
